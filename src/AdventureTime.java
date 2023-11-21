@@ -50,9 +50,9 @@ public class AdventureTime {
         int a = countLinesInFile(fileName);
         int[] b = readFile(fileName);
         int count = 0;
-        for (int i = 0; i<a-5; i++) {
+        for (int i = 0; i<a-3; i++) {
             int sum1 = b[i] + b[i+1] + b[i+2];
-            int sum2 = b[i+3] + b[i+4] + b[i+5];
+            int sum2 = b[i+1] + b[i+2] + b[i+3];
             if (sum2>sum1) {
                 count++;
             }
@@ -111,7 +111,7 @@ public class AdventureTime {
                 aim = aim + parseInt(b[i].substring(5));
             }
             else {
-                depth = aim * parseInt(b[i].substring(8));
+                depth = depth + aim * parseInt(b[i].substring(8));
                 hoz = hoz + parseInt(b[i].substring(8));
             }
         }
